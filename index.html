@@ -104,13 +104,42 @@ input[type=number]:focus{border-color:var(--primary2);background:#fff;box-shadow
   .risk-details{width:100%}
   .status-badge{text-align:left}
 }
+
+.zambo-wrap{
+  position:absolute;right:22px;bottom:-18px;width:108px;height:142px;z-index:2;
+  filter:drop-shadow(0 9px 12px rgba(0,0,0,.22));transform:rotate(2deg)
+}
+.zambo{
+  width:100%;height:100%;object-fit:cover;object-position:center 28%;
+  border-radius:55px 55px 24px 24px;border:3px solid rgba(255,255,255,.8)
+}
+.header-copy{position:relative;z-index:3;max-width:650px}
+.brand-line{
+  display:inline-flex;align-items:center;gap:7px;font-size:.8rem;font-weight:700;
+  letter-spacing:.04em;margin-bottom:10px;opacity:.96
+}
+.ca-dot{
+  width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+  background:#fff;color:var(--primary);font-weight:900;font-size:.75rem
+}
+@media(max-width:700px){
+  .zambo-wrap{width:82px;height:108px;right:10px;bottom:-10px}
+  .header-copy{padding-right:65px}
+  .header h1{font-size:1.35rem}
+}
 </style>
 </head>
 <body>
 <div class="calculator-container">
   <header class="header">
-    <h1>Evaluación de Capacidad de Pago</h1>
+    <div class="zambo-wrap">
+      <img class="zambo" src="https://www.cajadeahorros.com.pa/wp-content/uploads/2025/06/zambo-graffiti-576x1024.jpg" alt="Zambo, mascota de Caja de Ahorros">
+    </div>
+    <div class="header-copy">
+      <div class="brand-line"><span class="ca-dot">ca</span> Caja de Ahorros</div>
+      <h1>Evaluación de Capacidad de Pago</h1>
     <p>Análisis de Riesgo Crediticio · Banca Panamá</p>
+    </div>
   </header>
 
   <section class="form-container">
@@ -143,7 +172,7 @@ input[type=number]:focus{border-color:var(--primary2);background:#fff;box-shadow
       </div>
     </div>
 
-    <div class="quick-hint">💡 El resultado se actualiza automáticamente mientras ingresas los datos.</div>
+    <div class="quick-hint">🐾 <strong>Zambo recomienda:</strong> evalúa la capacidad de pago antes de asumir una nueva obligación. El resultado se actualiza automáticamente.</div>
     <div class="action-row"><button class="reset-btn" id="resetBtn" type="button">↺ Limpiar datos</button></div>
   </section>
 
